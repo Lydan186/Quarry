@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Cantera">
+  <ClassDiagramComponents>
+    <Class name="Billing" package="" visibility="public" xPosition="823.0" yPosition="406.0">
+      <Fields>
+        <Field name="billingDate" type="Date" visibility="private"/>
+        <Field name="billNumber" type="String" visibility="private"/>
+        <Field name="request" type="Request" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="invoice" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClientBusiness" package="" visibility="public" xPosition="719.0" yPosition="90.0">
+      <Fields>
+        <Field name="CIF" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ClientPerson" package="" visibility="public" xPosition="439.0" yPosition="119.0">
+      <Fields>
+        <Field name="idCostumer" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Driver" package="" visibility="public" xPosition="102.0" yPosition="489.0">
+      <Fields>
+        <Field name="license" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Person" package="" visibility="public" xPosition="26.0" yPosition="163.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="addres" type="String" visibility="private"/>
+        <Field name="phone" type="String" visibility="private"/>
+        <Field name="DNI" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Product" package="" visibility="public" xPosition="310.0" yPosition="425.0">
+      <Fields>
+        <Field name="idProduct" type="String" visibility="private"/>
+        <Field name="productName" type="String" visibility="private"/>
+        <Field name="productMaterial" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Quadrant" package="" visibility="public" xPosition="1053.0" yPosition="610.0">
+      <Fields>
+        <Field name="request" type="Request" visibility="private"/>
+        <Field name="hourExplosionProgramming" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="explosionProgrammingMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Applicant" package="" visibility="public" xPosition="551.0" yPosition="404.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="applicant" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="User" package="" visibility="public" xPosition="235.0" yPosition="250.0">
+      <Fields>
+        <Field name="userName" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="login" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vehicle" package="" visibility="public" xPosition="270.0" yPosition="631.0">
+      <Fields>
+        <Field name="entryTime" type="Date" visibility="private"/>
+        <Field name="entryDate" type="Date" visibility="private"/>
+        <Field name="tuition" type="String" visibility="private"/>
+        <Field name="departureDate" type="Date" visibility="private"/>
+        <Field name="departureTime" type="Date" visibility="private"/>
+        <Field name="tonsLoaded" type="double" visibility="private"/>
+        <Field name="driver" type="Driver" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Request" package="" visibility="public" xPosition="551.0" yPosition="591.0">
+      <Fields>
+        <Field name="product" type="Product" visibility="private"/>
+        <Field name="date" type="Date" visibility="private"/>
+        <Field name="state" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="requested" returnType="void" visibility="public"/>
+        <Method name="applyFor" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="CostumerBusiness" package="" visibility="public" xPosition="636.0" yPosition="268.0">
+      <Methods/>
+    </Interface>
+    <Interface name="CostumerPerson" package="" visibility="public" xPosition="449.0" yPosition="284.0">
+      <Methods/>
+    </Interface>
+    <Enum name="PaymentMethods" package="" visibility="public" xPosition="1107.0" yPosition="322.0">
+      <Literals>
+        <Literal name="CASH"/>
+        <Literal name="CREDITCARD"/>
+        <Literal name="SIMPEMOVIL"/>
+        <Literal name="LITERAL"/>
+        <Literal name="BANKDRAFT"/>
+      </Literals>
+    </Enum>
+    <Interface name="RequestProduct" package="" visibility="public" xPosition="794.0" yPosition="644.0">
+      <Methods/>
+    </Interface>
+    <Interface name="SharedInformation" package="" visibility="public" xPosition="393.0" yPosition="18.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="User" target="Person"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ClientBusiness" target="SharedInformation"/>
+    <HasRelation name="has" source="Request" target="Product" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="has" source="Billing" target="PaymentMethods" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="Request" target="Applicant" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Applicant" target="CostumerPerson"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Request" target="RequestProduct"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Applicant" target="CostumerBusiness"/>
+    <HasRelation name="has" source="Vehicle" target="Driver" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="Billing" target="Request" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ClientPerson" target="CostumerPerson"/>
+    <HasRelation name="has" source="Request" target="Vehicle" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Driver" target="Person"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Quadrant" target="RequestProduct"/>
+    <IsRelation name="is" source="ClientPerson" target="Person"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ClientBusiness" target="CostumerBusiness"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Person" target="SharedInformation"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
