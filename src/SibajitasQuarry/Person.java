@@ -1,3 +1,8 @@
+package SibajitasQuarry;
+
+
+import SibajitasQuarry.SharedInformation;
+
 public class Person implements SharedInformation {
 
     private String name;

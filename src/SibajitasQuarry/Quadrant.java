@@ -1,4 +1,8 @@
+package SibajitasQuarry;
 
+
+import SibajitasQuarry.Request;
+import SibajitasQuarry.RequestProduct;
 import java.util.Date;
 
 public class Quadrant implements RequestProduct {

@@ -1,3 +1,5 @@
+package SibajitasQuarry;
+
 public class Product {
 
     private String idProduct;

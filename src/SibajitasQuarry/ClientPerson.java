@@ -1,3 +1,9 @@
+package SibajitasQuarry;
+
+
+import SibajitasQuarry.CostumerPerson;
+import SibajitasQuarry.Person;
+
 public class ClientPerson extends Person implements CostumerPerson {
 
     private String idCostumer;

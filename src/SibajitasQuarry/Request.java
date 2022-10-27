@@ -1,4 +1,7 @@
+package SibajitasQuarry;
 
+
+import SibajitasQuarry.RequestProduct;
 import java.util.Date;
 
 public class Request implements RequestProduct {

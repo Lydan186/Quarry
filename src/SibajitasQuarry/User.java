@@ -1,3 +1,5 @@
+package SibajitasQuarry;
+
 public class User extends Person {
 
     private String userName;

@@ -1,3 +1,8 @@
+package SibajitasQuarry;
+
+
+import SibajitasQuarry.Person;
+
 public class Driver extends Person {
 
     private String license;
