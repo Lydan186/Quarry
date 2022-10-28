@@ -1,6 +1,5 @@
 package SibajitasQuarry;
 
-
 import SibajitasQuarry.CostumerPerson;
 import SibajitasQuarry.Person;
 
@@ -36,8 +35,17 @@ public class ClientPerson extends Person implements CostumerPerson {
 
     @Override
     public String toString() {
-        return super.toString()+ "ClientPerson{" + "idCostumer=" + idCostumer + '}';
+        return super.toString() + "ClientPerson{" + "idCostumer=" + idCostumer + '}';
     }
-    
-    
+
+    @Override
+    public String getIdCustomer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setIdCustomer(String idCustomer) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

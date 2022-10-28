@@ -1,8 +1,5 @@
 package SibajitasQuarry;
 
-
-import SibajitasQuarry.SharedInformation;
-
 public class Person implements SharedInformation {
 
     private String name;
@@ -81,9 +78,8 @@ public class Person implements SharedInformation {
 
     @Override
     public String toString() {
-        return "Person{" + "name=" + name + ", addres=" + addres + ", phone=" + 
-                phone + ", DNI=" + DNI + '}';
+        return "Person{" + "name=" + name + ", addres=" + addres + ", phone="
+                + phone + ", DNI=" + DNI + '}';
     }
-    
-    
+
 }

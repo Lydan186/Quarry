@@ -1,6 +1,5 @@
 package SibajitasQuarry;
 
-
 import SibajitasQuarry.Request;
 import SibajitasQuarry.RequestProduct;
 import java.util.Date;
@@ -51,9 +50,18 @@ public class Quadrant implements RequestProduct {
     public String toString() {
         return "Quadrant{" + "request=" + request + ", hourExplosionProgramming=" + hourExplosionProgramming + '}';
     }
-    
-    
 
     public void explosionProgrammingMethod() {
     }
+
+    @Override
+    public Product getProduct() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setProduct(Product product) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

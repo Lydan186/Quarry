@@ -1,6 +1,5 @@
 package SibajitasQuarry;
 
-
 import SibajitasQuarry.RequestProduct;
 import java.util.Date;
 
@@ -67,12 +66,11 @@ public class Request implements RequestProduct {
     public String toString() {
         return "Request{" + "product=" + product + ", date=" + date + ", state=" + state + '}';
     }
-    
-    
 
     public void requested() {
     }
 
     public void applyFor() {
     }
+
 }
