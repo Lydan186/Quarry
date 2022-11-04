@@ -3,22 +3,23 @@ package clases;
 import java.util.Date;
 
 /**
- * En esta clase se encuentran los objetos relacionados a los vehiculos y la 
- * fecha de entrada y salida de los mismos, además se encuentra el constructor 
+ * En esta clase se encuentran los objetos relacionados a los vehiculos y la
+ * fecha de entrada y salida de los mismos, además se encuentra el constructor
  * ToString y los metodos get y set.
+ *
  * @author dilan
  */
 public class Vehicle {
-
-    private Date entryTime;
-
-    private Date entryDate;
 
     private String tuition;
 
     private Date departureDate;
 
     private Date departureTime;
+
+    private Date entryTime;
+
+    private Date entryDate;
 
     private double tonsLoaded;
 

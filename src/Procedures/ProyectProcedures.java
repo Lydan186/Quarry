@@ -28,7 +28,7 @@ import java.util.Date;
 public class ProyectProcedures {
 
     static Scanner scanner = new Scanner(System.in);
-    static Scanner scannertwo = new Scanner(System.in);
+    static Scanner scannerTwo = new Scanner(System.in);
     static User registerUser[] = new User[10];
     static Applicant registerPerson[] = new Applicant[10];
     static Applicant registerBusines[] = new Applicant[10];
@@ -92,8 +92,7 @@ public class ProyectProcedures {
     /*
     Este metodo se encarga de mostrar los productos disponibles
      */
-
-    public static void Product() {
+    public static void product() {
         allProduct[0] = new Product("12", "Arena Economica", "Arena");
         allProduct[1] = new Product("23", "Graba", "Graba");
         allProduct[2] = new Product("34", "BarroPremium", "Barro");
@@ -106,7 +105,7 @@ public class ProyectProcedures {
     las opciones que se desean hacer en el programa, lo hace con un dato 
     int opcion que al digitar una opcion lo retorna.
      */
-    public int MenuLogin() {
+    public int menuLogin() {
         int option = 0;
         System.out.println("____________________________________");
         System.out.println("1-Funciones tipo Cliente");
@@ -183,18 +182,18 @@ public class ProyectProcedures {
         System.out.println("Digite los datos requeridos");
         System.out.println("_______________________________");
         System.out.println("Digite usuario a registar");
-        registrationUsername = scannertwo.nextLine();
+        registrationUsername = scannerTwo.nextLine();
         System.out.println("Digite el contraseña a registrar");
-        registrationUserp = scannertwo.nextLine();
+        registrationUserp = scannerTwo.nextLine();
 
         System.out.println("Digite su nombre");
-        registrationName = scannertwo.nextLine();
+        registrationName = scannerTwo.nextLine();
         System.out.println("Digite su direccion");
-        registrationAdress = scannertwo.nextLine();
+        registrationAdress = scannerTwo.nextLine();
         System.out.println("Digite su telefono");
-        registrationPhone = scannertwo.nextLine();
+        registrationPhone = scannerTwo.nextLine();
         System.out.println("Digite su DNI");
-        registrationDni = scannertwo.nextLine();
+        registrationDni = scannerTwo.nextLine();
 
         return new User(registrationUsername, registrationUserp,
                 registrationName, registrationAdress, registrationPhone,
@@ -210,14 +209,13 @@ public class ProyectProcedures {
 
         String registrationUsername;
         String registrationUserp;
-        String registrationName;
         System.out.println("----------------------------");
         System.out.println("Bienvenido al login :D");
         System.out.println("----------------------------");
         System.out.println("Porfavor Digite su usuario");
-        registrationUsername = scannertwo.nextLine();
+        registrationUsername = scannerTwo.nextLine();
         System.out.println("Porfavor Digite su contraseña");
-        registrationUserp = scannertwo.nextLine();
+        registrationUserp = scannerTwo.nextLine();
 
         return new User(registrationUsername, registrationUserp);
     }
@@ -229,9 +227,10 @@ public class ProyectProcedures {
     public Product requestProduct() {
         verifier = false;
         String idProduct = null;
-        String productNames = null;
         String productMaterial = null;
-        Product();
+        String productNames = null;
+
+        product();
         seeProducts();
         do {
             System.out.println("digite el numero de producto a escojer");
@@ -331,13 +330,13 @@ public class ProyectProcedures {
     public Applicant personRegister() {
 
         System.out.println("Digite usuario a registar");
-        String personName = scannertwo.nextLine();
+        String personName = scannerTwo.nextLine();
         System.out.println("Digite su cedula a registrar");
-        String personDni = scannertwo.nextLine();
+        String personDni = scannerTwo.nextLine();
         System.out.println("Digite su telefono a registrar");
-        String personPhone = scannertwo.nextLine();
+        String personPhone = scannerTwo.nextLine();
         System.out.println("Digite la direccion a registrar");
-        String personAdress = scannertwo.nextLine();
+        String personAdress = scannerTwo.nextLine();
         return new Applicant(personName, personDni, personPhone, personAdress);
 
     }
@@ -349,13 +348,13 @@ public class ProyectProcedures {
     public Applicant businesRegister() {
 
         System.out.println("Digite la empresa a registar");
-        String businesName = scannertwo.nextLine();
+        String businesName = scannerTwo.nextLine();
         System.out.println("Digite el CIF de la empresa");
-        String busisnesCif = scannertwo.nextLine();
+        String busisnesCif = scannerTwo.nextLine();
         System.out.println("Digite su telefono a registrar");
-        String personPhone = scannertwo.nextLine();
+        String personPhone = scannerTwo.nextLine();
         System.out.println("Digite la direccion a registrar");
-        String businesAdress = scannertwo.nextLine();
+        String businesAdress = scannerTwo.nextLine();
         return new Applicant(businesName, busisnesCif, personPhone,
                 businesAdress, null);
 
@@ -368,12 +367,12 @@ public class ProyectProcedures {
      */
     public Applicant registerCustomer() {
         verifier = false;
-
-        String name = null;
-        String idCostumer = null;
-        String cif = null;
-        String phone = null;
         String addres = null;
+        String cif = null;
+        String idCostumer = null;
+        String name = null;
+        String phone = null;
+
         int select = 0;
         do {
 
@@ -405,7 +404,7 @@ public class ProyectProcedures {
                     do {
                         System.out.println("digite el nombre de la persona que"
                                 + " desea asignar la solicitud");
-                        String nameP = scannertwo.nextLine();
+                        String nameP = scannerTwo.nextLine();
 
                         for (int i = 0; i < registerPerson.length; i++) {
                             if (registerPerson[i] != null) {
@@ -430,7 +429,7 @@ public class ProyectProcedures {
                     do {
                         System.out.println("digite el nombre de la empresa que"
                                 + " desea asignar la solicitud");
-                        String nameB = scannertwo.nextLine();
+                        String nameB = scannerTwo.nextLine();
 
                         for (int i = 0; i < registerBusines.length; i++) {
                             if (nameB.equals(registerBusines[i].getName())) {
@@ -461,7 +460,7 @@ public class ProyectProcedures {
      */
     public Request requestRegister() {
         System.out.println("Digite el codigo de la solicitud");
-        String numRequest = scannertwo.nextLine();
+        String numRequest = scannerTwo.nextLine();
 
         Date requestDate = new Date();
 
@@ -475,9 +474,9 @@ public class ProyectProcedures {
     los datos de nombre de usuario y la contraseña y si es correcta entonces
     que de la bienvenida al sistema
      */
-    public void Login() {
+    public void login() {
         verifier = false;
-        registerUser[0] = new User("admin", "admin123", "James", "Alamedas", 
+        registerUser[0] = new User("admin", "admin123", "James", "Alamedas",
                 "61506639",
                 "604800142");
 
@@ -507,23 +506,23 @@ public class ProyectProcedures {
     conductor, además de retornar estos datos para guardarlos en un vector
      */
     public Driver driverRegister() {
-
-        String nameDriver;
-        String license;
-        String phone;
-        String dniDriver;
         String Addres;
+        String dniDriver;
+        String license;
+        String nameDriver;
+        String phone;
+
 
         System.out.println("Nombre del conductor");
-        nameDriver = scannertwo.nextLine();
+        nameDriver = scannerTwo.nextLine();
         System.out.println("licencia del conductor");
-        license = scannertwo.nextLine();
+        license = scannerTwo.nextLine();
         System.out.println("Direccion de casa del conductor");
-        Addres = scannertwo.nextLine();
+        Addres = scannerTwo.nextLine();
         System.out.println("telefono celular");
-        phone = scannertwo.nextLine();
+        phone = scannerTwo.nextLine();
         System.out.println("DNI");
-        dniDriver = scannertwo.nextLine();
+        dniDriver = scannerTwo.nextLine();
 
         return new Driver(license, nameDriver, Addres, phone, dniDriver);
 
@@ -540,7 +539,7 @@ public class ProyectProcedures {
         Date entryDate = null;
         Date departureDate = null;
         System.out.println("Digite la matricula del vehiculo");
-        String tuition = scannertwo.nextLine();
+        String tuition = scannerTwo.nextLine();
 
         System.out.println("Digite la cantidad de toneladas que desea"
                 + " comparar");
@@ -549,7 +548,7 @@ public class ProyectProcedures {
         System.out.println("Digite la fecha de entrada del vehiculo en el"
                 + " siguiente formato (\"dd-MM-YYYY\")");
         try {
-            String selectEntryT = scannertwo.nextLine();
+            String selectEntryT = scannerTwo.nextLine();
             SimpleDateFormat format = new SimpleDateFormat("dd-MM-YYYY");
             entryDate = format.parse(selectEntryT);
         } catch (Exception i) {
@@ -560,7 +559,7 @@ public class ProyectProcedures {
                 + " (\"dd-MM-YYYY\")");
 
         try {
-            String selectDepartureD = scannertwo.nextLine();
+            String selectDepartureD = scannerTwo.nextLine();
             SimpleDateFormat format = new SimpleDateFormat("dd-MM-YYYY");
             departureDate = format.parse(selectDepartureD);
         } catch (Exception i) {
@@ -571,7 +570,7 @@ public class ProyectProcedures {
         System.out.println("Digite la hora de entrada en el siguiente formato"
                 + " (HH:MM:SS)");
         try {
-            String selectEntry = scannertwo.nextLine();
+            String selectEntry = scannerTwo.nextLine();
             SimpleDateFormat format = new SimpleDateFormat("HH:MM:SS");
             entryTime = format.parse(selectEntry);
         } catch (Exception i) {
@@ -582,7 +581,7 @@ public class ProyectProcedures {
                 + " (HH:MM:SS)");
 
         try {
-            String selectDepartureT = scannertwo.nextLine();
+            String selectDepartureT = scannerTwo.nextLine();
             SimpleDateFormat format = new SimpleDateFormat("HH:MM:SS");
             departureTime = format.parse(selectDepartureT);
         } catch (Exception i) {
@@ -629,7 +628,7 @@ public class ProyectProcedures {
     Este metodo se encarga de mostrar los productos disponibles
      */
     public void seeProducts() {
-        Product();
+        product();
 
         for (int i = 0; i < allProduct.length; i++) {
 
@@ -834,7 +833,7 @@ public class ProyectProcedures {
         do {
             System.out.println("Digite el numero de solicitud que desea"
                     + " cancelar");
-            String selectId = scannertwo.nextLine();
+            String selectId = scannerTwo.nextLine();
 
             for (int i = 0; i < registerRequest.length; i++) {
                 if (registerRequest[i] != (null)) {
@@ -913,16 +912,16 @@ public class ProyectProcedures {
      * @return retorna la salida del booleano del sistema.
      */
     public boolean exitLogin() {
-
-        boolean exitProgram = true;
         boolean exitAll;
+        boolean exitProgram = true;
+        
         do {
             exitAll = true;
 
             System.out.println("¿Desea salir del programa?");
             System.out.println("____________________________");
             System.out.println("digite si/no: ");
-            String exit = scannertwo.nextLine();
+            String exit = scannerTwo.nextLine();
             if (exit.equalsIgnoreCase("si")) {
 
                 exitAll = false;
@@ -976,7 +975,7 @@ public class ProyectProcedures {
     /* este metodo tiene como funcion alsignar los datos de factura y retornarlos*/
     public Billing billingCustomer() {
         System.out.println("Digite el numero de factura");
-        String numBilling = scannertwo.nextLine();
+        String numBilling = scannerTwo.nextLine();
         Date billingDate = new Date();
         return new Billing(billingDate, numBilling, request);
     }
@@ -1007,7 +1006,7 @@ public class ProyectProcedures {
         do {
 
             System.out.println("digite el num de solicitud a facturar");
-            idRequest = scannertwo.nextLine();
+            idRequest = scannerTwo.nextLine();
             for (int i = 0; i < registerRequest.length; i++) {
                 if ((registerRequest[i] != (null)) && (registerRequest[i]
                         .getApplicant().getIdCostumer() != null)) {

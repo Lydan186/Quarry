@@ -5,18 +5,19 @@ package clases;
  * esta clase implementa a SharedInformation, personInterface y a NewInterface,
  * en esta misma se encuentra el constructor ToString y los metodos get y set
  * correspondientes.
+ *
  * @author dilan
  */
 public class Person implements SharedInformation, NewInterface,
         personInterface {
 
-    private String name;
-
     private String addres;
 
-    private String phone;
-
     private String DNI;
+
+    private String name;
+
+    private String phone;
 
     public Person() {
     }

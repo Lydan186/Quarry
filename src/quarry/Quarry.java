@@ -4,7 +4,6 @@
  */
 package quarry;
 
-import clases.Applicant;
 import java.util.Scanner;
 import Procedures.ProyectProcedures;
 import clases.User;
@@ -19,9 +18,6 @@ import clases.Driver;
  */
 public class Quarry {
 
-    static Applicant[] solicitantes[];
-
-    static User[] usuarios[];
     static Scanner scanner = new Scanner(System.in);
     static User user = new User();
     static Driver driver = new Driver();
@@ -38,14 +34,14 @@ public class Quarry {
 
         boolean exitAll = true;
 
-        procedures.Login();
+        procedures.login();
         do {
             /*
             este switch tiene como fucnion almacenar todo el conjunto de 
             opciones
    
              */
-            switch (procedures.MenuLogin()) {
+            switch (procedures.menuLogin()) {
                 /* este caso tiene como funcion almacenar los datos del registro de clientes*/
                 case 1:
 
@@ -134,7 +130,7 @@ de personas, super usuario y cuadrante*/
                 /* este caso tiene como funcion regiustrarse como super user */
                 case 4:
 
-                    procedures.Login();
+                    procedures.login();
                     if (procedures.verifier == true) {
                         procedures.registerUser();
                     }
@@ -144,7 +140,7 @@ de personas, super usuario y cuadrante*/
                     programa*/
                 case 5:
                     System.out.println("desea iniciar seccion de nuevo");
-                    procedures.Login();
+                    procedures.login();
 
                     break;
                 /* este caso tiene como funcion salir del programa*/

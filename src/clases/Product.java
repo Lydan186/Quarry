@@ -1,18 +1,19 @@
 package clases;
 
 /**
- * En esta clase se encuentran los objetos correspondientes a los productos
- * para el programa, estos productos son usados en ciertas partes del programa,
- * esta clase contiene el constructor ToString y los metodos get y set.
+ * En esta clase se encuentran los objetos correspondientes a los productos para
+ * el programa, estos productos son usados en ciertas partes del programa, esta
+ * clase contiene el constructor ToString y los metodos get y set.
+ *
  * @author dilan
  */
 public class Product {
 
     private String idProduct;
 
-    private String productName;
-
     private String productMaterial;
+
+    private String productName;
 
     public Product() {
     }
