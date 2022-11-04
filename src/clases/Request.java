@@ -2,9 +2,10 @@ package clases;
 
 import java.util.Date;
 
-/*
-En esta clase se encuentran los objetos para las solicitudes y todo lo que deben
-de llevar, se encuentra el constructor ToString y los metodos get y set.
+/**
+ * En esta clase se encuentran los objetos para las solicitudes y todo lo que
+ * deben de llevar, se encuentra el constructor ToString y los metodos get y set
+ * @author dilan
  */
 public class Request implements RequestProduct {
 
@@ -87,9 +88,10 @@ public class Request implements RequestProduct {
         return vehicle;
     }
 
-    /**
-     * @param date the date to set
-     */
+   /**
+    * 
+    * @param vehicle 
+    */
     public void setVehicle(Vehicle vehicle) {
         this.date = date;
     }
@@ -99,7 +101,7 @@ public class Request implements RequestProduct {
     }
 
     /**
-     * @param date the date to set
+     * @param date the date to set la fecha en la solicitud
      */
     public void setApplicant(Applicant aplicant) {
         this.applicant = applicant;

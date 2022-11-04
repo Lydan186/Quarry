@@ -909,6 +909,7 @@ public class ProyectProcedures {
      * con este metodo permite salir al usuario del programa por medio de una
      * serie de condicionales
      *
+     * @return retorna la salida del booleano del sistema.
      */
     public boolean exitLogin() {
 

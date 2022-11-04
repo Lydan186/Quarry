@@ -1,9 +1,10 @@
 package clases;
 
-/*
-Esta clase de persona cliente se encuentran los atributos que diferencian a una
-persona de un cliente, lo que es el Id de cliente, además de heredar objetos de
-la clase Person, en esta clase se encuentra sl ToString y los metodos get y set.
+/**
+ * En esta clase se encuentra la información sobre el cliente empresa,
+ * con el CIF, que la misma es la cedula juridica, en esta se encuentra 
+ * el ToString y los metodos get y set.
+ * @author dilan
  */
 public class ClientPerson extends Person implements CostumerPerson {
 

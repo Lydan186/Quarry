@@ -1,9 +1,11 @@
 package clases;
 
-/*
-En esta clase se encuentra los datos que han sido implementados desde las clases
-CostumerPerson, CostumerBusiness y PersonInterface, para asi poder añadir a los
-cliente, en esta se encuentra el contructor ToString y los metodos get y set.
+/**
+ * En esta clase se encuentra los datos que han sido implementados desde las
+ * clases CostumerPerson, CostumerBusiness y PersonInterface, para asi poder
+ * añadir a los cliente, en esta se encuentra el contructor ToString y 
+ * los metodos get y set.
+ * @author dilan
  */
 public class Applicant implements CostumerPerson, CostumerBusines,
         personInterface {

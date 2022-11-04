@@ -1,10 +1,11 @@
 package clases;
 
-/*
-En esta clase Driver que hereda de persona se encuentran los objetos para un 
-conductor, en esta misma clase se encuentra los objetos que diferencian al 
-conductor de una persona, además de encontrarse el constructor ToString de la 
-clase y los metodos get y set correspondientes.
+/**
+ * En esta clase Driver que hereda de persona se encuentran los objetos para un
+ * conductor, en esta misma clase se encuentra los objetos que diferencian al
+ * conductor de una persona, además de encontrarse el constructor ToString de
+ * la clase y los metodos get y set correspondientes.
+ * @author dilan
  */
 public class Driver extends Person {
 

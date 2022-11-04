@@ -1,9 +1,10 @@
 package clases;
 
-/*
-En esta clase se encuentra la información sobre el cliente empresa, con el CIF,
-que la misma es la cedula juridica, en esta se encuentra el ToString y los 
-metodos get y set.
+/**
+ * En esta clase se encuentra la información sobre el cliente empresa, con el 
+ * CIF,que la misma es la cedula juridica, en esta se encuentra el ToString y 
+ * los metodos get y set.
+ * @author dilan
  */
 public class ClientBusiness implements SharedInformation, CostumerBusines {
 

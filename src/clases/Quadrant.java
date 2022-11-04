@@ -2,9 +2,10 @@ package clases;
 
 import java.util.Date;
 
-/*
-En esta clase se localizan los cuadrantes que se deben de explotar para 
-las solicitudes, se encuentra el ToString y los metodos get y set.
+/**
+ * En esta clase se localizan los cuadrantes que se deben de explotar para 
+ * las solicitudes, se encuentra el ToString y los metodos get y set.
+ * @author dilan
  */
 public class Quadrant implements RequestProduct {
 

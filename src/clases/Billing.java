@@ -2,10 +2,11 @@ package clases;
 
 import java.util.Date;
 
-/*
-En la clase billing se encuentran los datos necesarios para poder lograr hacer 
-una factura, necesita datos de la  solicitud para la factura, en está se 
-encuentra el constructor ToString y los metodos get y set.
+/**
+ * En la clase billing se encuentran los datos necesarios para poder lograr 
+ * hacer una factura, necesita datos de la  solicitud para la factura, en está 
+ * se encuentra el constructor ToString y los metodos get y set.
+ * @author dilan
  */
 public class Billing {
 

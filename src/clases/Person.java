@@ -1,10 +1,11 @@
 package clases;
 
-/*
-En esta clase se encuentran los objetos que se encuentran en una persona, esta 
-clase implementa a SharedInformation, personInterface y a NewInterface, en esta
-misma se encuentra el constructor ToString y los metodos get y set 
-correspondientes.
+/**
+ * En esta clase se encuentran los objetos que se encuentran en una persona,
+ * esta clase implementa a SharedInformation, personInterface y a NewInterface,
+ * en esta misma se encuentra el constructor ToString y los metodos get y set
+ * correspondientes.
+ * @author dilan
  */
 public class Person implements SharedInformation, NewInterface,
         personInterface {
