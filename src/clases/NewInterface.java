@@ -5,7 +5,7 @@
 package clases;
 
 /**
- *
+ *En esta interfaz se pasan los metodos necesarios para la otra clase.
  * @author james
  */
 public interface NewInterface {

@@ -1,5 +1,11 @@
 package clases;
 
+/*
+En esta clase Driver que hereda de persona se encuentran los objetos para un 
+conductor, en esta misma clase se encuentra los objetos que diferencian al 
+conductor de una persona, además de encontrarse el constructor ToString de la 
+clase y los metodos get y set correspondientes.
+ */
 public class Driver extends Person {
 
     private String license;
@@ -12,7 +18,8 @@ public class Driver extends Person {
         this.Name = nametwo;
     }
 
-    public Driver(String license, String name, String addres, String phone, String DNI) {
+    public Driver(String license, String name, String addres, String phone,
+            String DNI) {
         super(name, addres, phone, DNI);
         this.license = license;
 

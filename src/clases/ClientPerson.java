@@ -1,5 +1,10 @@
 package clases;
 
+/*
+Esta clase de persona cliente se encuentran los atributos que diferencian a una
+persona de un cliente, lo que es el Id de cliente, además de heredar objetos de
+la clase Person, en esta clase se encuentra sl ToString y los metodos get y set.
+ */
 public class ClientPerson extends Person implements CostumerPerson {
 
     private String idCostumer;
@@ -11,7 +16,8 @@ public class ClientPerson extends Person implements CostumerPerson {
         this.idCostumer = idCostumer;
     }
 
-    public ClientPerson(String idCostumer, String name, String addres, String phone, String DNI) {
+    public ClientPerson(String idCostumer, String name, String addres,
+            String phone, String DNI) {
         super(name, addres, phone, DNI);
         this.idCostumer = idCostumer;
     }
@@ -34,8 +40,8 @@ public class ClientPerson extends Person implements CostumerPerson {
 
     @Override
     public String toString() {
-        return super.toString()+ "ClientPerson{" + "idCostumer=" + idCostumer + '}';
+        return super.toString() + "ClientPerson{" + "idCostumer="
+                + idCostumer + '}';
     }
-    
-    
+
 }

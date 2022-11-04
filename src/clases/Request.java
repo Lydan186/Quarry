@@ -2,6 +2,10 @@ package clases;
 
 import java.util.Date;
 
+/*
+En esta clase se encuentran los objetos para las solicitudes y todo lo que deben
+de llevar, se encuentra el constructor ToString y los metodos get y set.
+ */
 public class Request implements RequestProduct {
 
     private Product product;
@@ -19,7 +23,8 @@ public class Request implements RequestProduct {
         this.state = state;
     }
 
-    public Request(Product product, Applicant applicant, Date date, String state, Vehicle vehicle, String numRequest) {
+    public Request(Product product, Applicant applicant, Date date,
+            String state, Vehicle vehicle, String numRequest) {
         this.product = product;
         this.applicant = applicant;
         this.date = date;
@@ -100,7 +105,8 @@ public class Request implements RequestProduct {
         this.applicant = applicant;
     }
 
-    public Request(Product product, Applicant applicant, Date date, String numRequest, String state, Vehicle vehicle) {
+    public Request(Product product, Applicant applicant, Date date,
+            String numRequest, String state, Vehicle vehicle) {
         this.product = product;
         this.applicant = applicant;
         this.date = date;
@@ -115,7 +121,10 @@ public class Request implements RequestProduct {
 
     @Override
     public String toString() {
-        return "Request{" + "product=" + product + ", applicant=" + applicant + ", date=" + date + ", numRequest=" + numRequest + ", state=" + state + ", vehicle=" + vehicle + '}';
+        return "Request{" + "product=" + product + ", applicant="
+                + applicant + ", date=" + date + ", numRequest="
+                + numRequest + ", state=" + state + ", vehicle="
+                + vehicle + '}';
     }
 
 }

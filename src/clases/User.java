@@ -1,5 +1,8 @@
 package clases;
-
+/*
+Esta clase hereda de la clase persona, en esta clase se encuentran los objetos
+de un usuario, además se encuentra el ToString y los metodos get y set.
+*/
 public class User extends Person {
 
     private String userName;
@@ -7,7 +10,8 @@ public class User extends Person {
     private String password;
 
     public String toStrin() {
-        return "User{" + "userName=" + userName + ", password=" + password + '}';
+        return "User{" + "userName=" + userName + ", password="
+                + password + '}';
     }
 
     public User() {
@@ -18,7 +22,8 @@ public class User extends Person {
         this.password = addres;
     }
 
-    public User(String userName, String password, String name, String addres, String phone, String DNI) {
+    public User(String userName, String password, String name, String addres,
+            String phone, String DNI) {
         super(name, addres, phone, DNI);
         this.userName = userName;
         this.password = password;
@@ -55,7 +60,8 @@ public class User extends Person {
 
     @Override
     public String toString() {
-        return super.toString() + "User{" + "userName=" + userName + ", password=" + password + '}';
+        return super.toString() + "User{" + "userName=" + userName
+                + ", password=" + password + '}';
     }
 
     public void login() {

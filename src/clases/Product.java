@@ -1,5 +1,10 @@
 package clases;
 
+/*
+En esta clase se encuentran los objetos correspondientes a los productos 
+para el programa, estos productos son usados en ciertas partes del programa, 
+esta clase contiene el constructor ToString y los metodos get y set.
+ */
 public class Product {
 
     private String idProduct;
@@ -15,7 +20,8 @@ public class Product {
         this.idProduct = idProduct;
     }
 
-    public Product(String idProduct, String productName, String productMaterial) {
+    public Product(String idProduct, String productName,
+            String productMaterial) {
         this.idProduct = idProduct;
         this.productName = productName;
         this.productMaterial = productMaterial;
@@ -65,16 +71,19 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" + "idProduct=" + idProduct + ", productName=" + productName + ", productMaterial=" + productMaterial + '}';
+        return "Product{" + "idProduct=" + idProduct + ", productName="
+                + productName + ", productMaterial=" + productMaterial + '}';
     }
- 
+
     public String toName() {
-        return "Product{" + "product="+ productName + '}';
+        return "Product{" + "product=" + productName + '}';
     }
+
     public String toProductId() {
-        return "Product{" + "id product="+ idProduct + '}';
+        return "Product{" + "id product=" + idProduct + '}';
     }
-     public String toMaterial() {
-        return "Product{" + "product Material="+ productMaterial + '}';
+
+    public String toMaterial() {
+        return "Product{" + "product Material=" + productMaterial + '}';
     }
 }

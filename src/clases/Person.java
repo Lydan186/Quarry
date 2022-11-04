@@ -1,6 +1,13 @@
 package clases;
 
-public class Person implements SharedInformation, NewInterface, personInterface {
+/*
+En esta clase se encuentran los objetos que se encuentran en una persona, esta 
+clase implementa a SharedInformation, personInterface y a NewInterface, en esta
+misma se encuentra el constructor ToString y los metodos get y set 
+correspondientes.
+ */
+public class Person implements SharedInformation, NewInterface,
+        personInterface {
 
     private String name;
 
@@ -74,7 +81,7 @@ public class Person implements SharedInformation, NewInterface, personInterface 
     @Override
     public String getDNI() {
         return DNI;
-        
+
     }
 
     /**
@@ -87,13 +94,12 @@ public class Person implements SharedInformation, NewInterface, personInterface 
 
     @Override
     public String toString() {
-        return "" + "Nombre=" + name + ", Direccion=" + addres + ", Telefono=" + 
-                phone + ", DNI=" + DNI + ',';
+        return "" + "Nombre=" + name + ", Direccion=" + addres + ", Telefono="
+                + phone + ", DNI=" + DNI + ',';
     }
+
     {
-    
-    
-    
+
     }
-    
+
 }

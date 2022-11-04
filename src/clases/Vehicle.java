@@ -1,7 +1,11 @@
 package clases;
 
 import java.util.Date;
-
+/*
+En esta clase se encuentran los objetos relacionados a los vehiculos y la fecha
+de entrada y salida de los mismos, además se encuentra el constructor ToString y
+los metodos get y set.
+*/
 public class Vehicle {
 
     private Date entryTime;
@@ -21,17 +25,17 @@ public class Vehicle {
     public Vehicle() {
     }
 
-    public Vehicle(Date entryDate, String tuition, Date departureDate, double tonsLoaded, Driver driver,Date entryTime,Date departureTime) {
+    public Vehicle(Date entryDate, String tuition, Date departureDate,
+            double tonsLoaded, Driver driver, Date entryTime,
+            Date departureTime) {
         this.entryDate = entryDate;
         this.tuition = tuition;
         this.departureDate = departureDate;
         this.tonsLoaded = tonsLoaded;
         this.driver = driver;
-        this.entryTime=entryTime;
-                this.departureTime=departureTime;
+        this.entryTime = entryTime;
+        this.departureTime = departureTime;
     }
-
-   
 
     public Vehicle(String tuition, double tonsLoaded, Driver driver) {
         this.tuition = tuition;
@@ -139,7 +143,10 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" + "entryTime=" + entryTime + ", entryDate=" + entryDate + ", tuition=" + tuition + ", departureDate=" + departureDate + ", departureTime=" + departureTime + ", tonsLoaded=" + tonsLoaded + ", driver=" + driver + '}';
+        return "Vehicle{" + "entryTime=" + entryTime + ", entryDate="
+                + entryDate + ", tuition=" + tuition + ", departureDate="
+                + departureDate + ", departureTime=" + departureTime
+                + ", tonsLoaded=" + tonsLoaded + ", driver=" + driver + '}';
     }
 
     public String driverInforma() {

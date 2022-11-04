@@ -11,7 +11,8 @@ import clases.User;
 import clases.Driver;
 
 /**
- *
+ *En esta clase se encuentra todos los metodos de la clase ProyectProcedures, 
+ * que hacen que el programa funcione.
  * @author dilan
  */
 public class Quarry {
@@ -25,7 +26,8 @@ public class Quarry {
     static ProyectProcedures procedures = new ProyectProcedures();
     static int loginProyect;
 
-    /**
+    /**Bueno, aqui se encuentran las opciones para los menus, donde se 
+     * escogen las opciones del sistema.
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -66,14 +68,26 @@ public class Quarry {
 
                 case 3:
                     //ver todos los datos
-                    
-                    procedures.seeRequest();
-                    procedures.seeSuperUser();
-                    procedures.seeProducts();
-                    procedures.seeQuadrant();
-                    procedures.seeRegisterV();
-                    System.out.println("ver facturas");
-                    procedures.seeBillingP();
+                    switch (procedures.viewData()) {
+                        case 1:
+                            procedures.seeRequest();
+                            break;
+                        case 2:
+                            procedures.seeSuperUser();
+                            break;
+                        case 3:
+                            procedures.seeProducts();
+                            break;
+                        case 4:
+                            procedures.seeQuadrant();
+                            break;
+                        case 5:
+                            procedures.seeRegisterV();
+                            break;
+                        case 6:
+                            procedures.seeBillingP();
+                            break;
+                    }
 
                     break;
                 case 4:
@@ -97,9 +111,9 @@ public class Quarry {
 
                     break;
                 case 8:
-                 
-                   Boolean exit= procedures.exitLogin();
-                   exitAll = exit;
+
+                    Boolean exit = procedures.exitLogin();
+                    exitAll = exit;
                     break;
 
             }
