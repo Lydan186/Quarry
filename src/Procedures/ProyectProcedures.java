@@ -477,7 +477,8 @@ public class ProyectProcedures {
      */
     public void Login() {
         verifier = false;
-        registerUser[0] = new User("1", "1", "James", "Alamedas", "61506639",
+        registerUser[0] = new User("admin", "admin123", "James", "Alamedas", 
+                "61506639",
                 "604800142");
 
         do {

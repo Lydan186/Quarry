@@ -90,7 +90,7 @@ public class Request implements RequestProduct {
 
    /**
     * 
-    * @param vehicle 
+    * @param vehicle the vehicle to set
     */
     public void setVehicle(Vehicle vehicle) {
         this.date = date;
@@ -101,7 +101,8 @@ public class Request implements RequestProduct {
     }
 
     /**
-     * @param date the date to set la fecha en la solicitud
+     * 
+     * @param aplicant the  Applicant to set
      */
     public void setApplicant(Applicant aplicant) {
         this.applicant = applicant;
