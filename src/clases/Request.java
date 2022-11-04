@@ -123,8 +123,7 @@ public class Request implements RequestProduct {
     public String toString() {
         return "Request{" + "product=" + product + ", applicant="
                 + applicant + ", date=" + date + ", numRequest="
-                + numRequest + ", state=" + state + ", vehicle="
-                + vehicle + '}';
+                + numRequest + ", state=" + state + ", vehicle=" + vehicle + '}';
     }
 
 }

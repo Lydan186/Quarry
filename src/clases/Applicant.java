@@ -33,8 +33,8 @@ public class Applicant implements CostumerPerson, CostumerBusines,
     }
 
     public String toStrinB() {
-        return "" + "Nombre=" + Name + ", CIF=" + CIF + ", Telefono=" + Phone
-                + ", Direccion=" + Addres + ',';
+        return "" + "Nombre=" + Name + ", CIF=" + CIF + ", Telefono="
+                + Phone + ", Direccion=" + Addres + ',';
     }
 
     public Applicant(String Name, String CIF, String Phone, String Addres,

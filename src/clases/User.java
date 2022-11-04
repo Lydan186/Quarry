@@ -1,8 +1,9 @@
 package clases;
+
 /*
 Esta clase hereda de la clase persona, en esta clase se encuentran los objetos
 de un usuario, además se encuentra el ToString y los metodos get y set.
-*/
+ */
 public class User extends Person {
 
     private String userName;

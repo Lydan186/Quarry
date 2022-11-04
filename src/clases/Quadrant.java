@@ -51,8 +51,7 @@ public class Quadrant implements RequestProduct {
     @Override
     public String toString() {
         return "Quadrant{" + "request=" + request
-                + ", hourExplosionProgramming="
-                + hourExplosionProgramming + '}';
+                + ", hourExplosionProgramming=" + hourExplosionProgramming + '}';
     }
 
     public void explosionProgrammingMethod() {

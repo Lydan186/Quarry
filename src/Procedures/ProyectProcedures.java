@@ -22,7 +22,8 @@ import java.util.Date;
  * vehiculos y solicitudes, además de donde se realizan los metodos para
  * registrar dichos datos
  *
- * @author james
+ * @author Dylan
+ * @author James
  */
 public class ProyectProcedures {
 
@@ -39,9 +40,59 @@ public class ProyectProcedures {
     static Product product = new Product();
     public boolean verifier = false;
 
+    public void iCustomer() {
+
+        System.out.println("Ayuda para usuario");
+        System.out.println("______________________________________________________"
+                + "______________________");
+        System.out.println(" opcion 1 ");
+        System.out.println("Aqui se encontrara lo necesario para "
+                + "registrar un cliente");
+        System.out.println("en esta opcion se puede registrar "
+                + "un cliente persona o emopresa");
+        System.out.println("tamibien ver los dantos del cliente sea"
+                + " empresa o persona");
+        System.out.println("_____________________________________"
+                + "_______________________________________");
+        System.out.println("opcion 2");
+        System.out.println("se encontra las opciones para tramitar"
+                + " una solicitud o dehabilitarla");
+        System.out.println("tambien permite ver los productos"
+                + " disponibles");
+        System.out.println("______________________________________"
+                + "______________________________________");
+        System.out.println("opcion 3 ");
+        System.out.println("Permite ver todas las solicitudes");
+        System.out.println("permite ver tdods los vehiculos "
+                + "registrados");
+        System.out.println("permite ver tdods los vehiculos "
+                + "registrados");
+        System.out.println("tambien se encuentra el estado de "
+                + "los cuadrantes");
+        System.out.println("_____________________________________"
+                + "_______________________________________");
+        System.out.println("opcion 4");
+        System.out.println("esta opcion permite registrarse como"
+                + " super usuario");
+        System.out.println("____________________________________"
+                + "________________________________________");
+        System.out.println("opcion 5");
+        System.out.println("esta opcion tiene como fin volver a "
+                + "ingresar con otro usuario");
+        System.out.println("____________________________________"
+                + "________________________________________");
+        System.out.println("opcion 6");
+        System.out.println("esta opcion tiene como fin salir del"
+                + " programa");
+        System.out.println("___________________________________"
+                + "_________________________________________");
+
+    }
+
     /*
     Este metodo se encarga de mostrar los productos disponibles
      */
+
     public static void Product() {
         allProduct[0] = new Product("12", "Arena Economica", "Arena");
         allProduct[1] = new Product("23", "Graba", "Graba");
@@ -53,42 +104,21 @@ public class ProyectProcedures {
     /*
     Este metodo se encarga de dar un menu en donde se encuentran
     las opciones que se desean hacer en el programa, lo hace con un dato 
-    int option que al digitar una option lo retorna.
+    int opcion que al digitar una opcion lo retorna.
      */
     public int MenuLogin() {
         int option = 0;
         System.out.println("____________________________________");
-        System.out.println("1- Registrar Cliente");
-        System.out.println("2- dehabilitar solicitudes");
-        System.out.println("3- Ver todos los datos");
-        System.out.println("4- Registrar Solicitudes");
-        System.out.println("5- Cancelar solicitudes");
-        System.out.println("6- Registrarse");
-        System.out.println("7- Volver a ingresar");
-        System.out.println("8- salir");
+        System.out.println("1-Funciones tipo Cliente");
+        System.out.println("2-Funciones tipo solicitud");
+        System.out.println("3-ver todos los datos");
+        System.out.println("4-Registrarse");
+        System.out.println("5-volver a ingresar");
+        System.out.println("6-Salir del sistema");
+        System.out.println("7-Ayuda para usuario");
         System.out.println("____________________________________");
         option = scanner.nextInt();
         return option;
-    }
-
-    /*
-    Esta metodo es el encargado de dar las opciones de visualización de los 
-    datos.
-     */
-    public int viewData() {
-        int option = 0;
-        System.out.println("____________________________________");
-        System.out.println("1- Ver los datos de solicitudes");
-        System.out.println("2- Ver los datos de usuarios");
-        System.out.println("3- ver los datos de productos");
-        System.out.println("4- Ver los datos de los cuadrantes");
-        System.out.println("5- Ver los datos de los vehiculos");
-        System.out.println("6- Ver las facturas");
-        System.out.println("____________________________________");
-        option = scanner.nextInt();
-
-        return option;
-
     }
 
     /*
@@ -98,15 +128,42 @@ public class ProyectProcedures {
     empresa.
      */
     public int selectCustomer() {
-        int opcion = 0;
+        int option = 0;
         System.out.println("Bienvendo");
-
+        System.out.println("_______________________________________________");
         System.out.println("1 si desea registar una persona");
         System.out.println("2 si desea registrar una empresa");
         System.out.println("3 Ver datos de persona");
         System.out.println("4 Ver datos de empresa");
-        opcion = scanner.nextInt();
-        return opcion;
+        System.out.println("_______________________________________________");
+        option = scanner.nextInt();
+        return option;
+    }
+
+    //register disable seeProducts
+    public int selectFuctionI() {
+        int option = 0;
+        System.out.println("Bienvendo");
+        System.out.println("_______________________________________________");
+        System.out.println("1 si desea registar una Solicitud");
+        System.out.println("2 si desea dehabilitar una Solicitud");
+        System.out.println("3 si desea ver los productos");
+        System.out.println("_______________________________________________");
+        option = scanner.nextInt();
+        return option;
+    }
+
+    public int seeInformation() {
+        int option = 0;
+        System.out.println("Datos del sistema");
+        System.out.println("_______________________________________________");
+        System.out.println("1 Ver datos de solicitudes ");
+        System.out.println("2 Ver estado de los cuadrantes");
+        System.out.println("3 Ver datos de vehiculos registrados ");
+        System.out.println("4 Ver datos de super Usuario ");
+        System.out.println("_______________________________________________");
+        option = scanner.nextInt();
+        return option;
     }
 
     /*
@@ -153,6 +210,7 @@ public class ProyectProcedures {
 
         String registrationUsername;
         String registrationUserp;
+        String registrationName;
         System.out.println("----------------------------");
         System.out.println("Bienvenido al login :D");
         System.out.println("----------------------------");
@@ -345,16 +403,16 @@ public class ProyectProcedures {
                 case 1:
                     seeCustomerP();
                     do {
-                        System.out.println("digite el nombre de la persona que "
-                                + "desea asignar la solicitud");
+                        System.out.println("digite el nombre de la persona que"
+                                + " desea asignar la solicitud");
                         String nameP = scannertwo.nextLine();
 
                         for (int i = 0; i < registerPerson.length; i++) {
                             if (registerPerson[i] != null) {
                                 if (nameP.equals(registerPerson[i].getName())) {
                                     name = registerPerson[i].getName();
-                                    idCostumer = registerPerson[i].
-                                            getIdCostumer();
+                                    idCostumer = registerPerson[i]
+                                            .getIdCostumer();
                                     phone = registerPerson[i].getPhone();
                                     addres = registerPerson[i].getAddres();
                                     verifier = true;
@@ -370,8 +428,8 @@ public class ProyectProcedures {
                 case 2:
                     seeCustomerB();
                     do {
-                        System.out.println("digite el nombre de la empresa que "
-                                + "desea asignar la solicitud");
+                        System.out.println("digite el nombre de la empresa que"
+                                + " desea asignar la solicitud");
                         String nameB = scannertwo.nextLine();
 
                         for (int i = 0; i < registerBusines.length; i++) {
@@ -431,8 +489,8 @@ public class ProyectProcedures {
 
                     if (requestL.toStrin().equals(registerUser[i].toStrin())) {
                         System.out.println("Se ha igresado correctamente");
-                        System.out.println("Bienvenido " + registerUser[i].
-                                getName());
+                        System.out.println("Bienvenido " + registerUser[i]
+                                .getName());
                         countName = i;
 
                         verifier = true;
@@ -483,12 +541,12 @@ public class ProyectProcedures {
         System.out.println("Digite la matricula del vehiculo");
         String tuition = scannertwo.nextLine();
 
-        System.out.println("Digite la cantidad de toneladas que "
-                + "desea comparar");
+        System.out.println("Digite la cantidad de toneladas que desea"
+                + " comparar");
         double tonsLoaded = scanner.nextInt();
 
-        System.out.println("Digite la fecha de entrada del vehiculo en el "
-                + "siguiente formato (\"dd-MM-YYYY\")");
+        System.out.println("Digite la fecha de entrada del vehiculo en el"
+                + " siguiente formato (\"dd-MM-YYYY\")");
         try {
             String selectEntryT = scannertwo.nextLine();
             SimpleDateFormat format = new SimpleDateFormat("dd-MM-YYYY");
@@ -497,8 +555,8 @@ public class ProyectProcedures {
             System.err.println("No digito la fecha correctamente");
         }
 
-        System.out.println("Digite la fecha de salida en el siguiente formato "
-                + "(\"dd-MM-YYYY\")");
+        System.out.println("Digite la fecha de salida en el siguiente formato"
+                + " (\"dd-MM-YYYY\")");
 
         try {
             String selectDepartureD = scannertwo.nextLine();
@@ -509,8 +567,8 @@ public class ProyectProcedures {
 
         }
 
-        System.out.println("Digite la hora de entrada en el siguiente formato "
-                + "(HH:MM:SS)");
+        System.out.println("Digite la hora de entrada en el siguiente formato"
+                + " (HH:MM:SS)");
         try {
             String selectEntry = scannertwo.nextLine();
             SimpleDateFormat format = new SimpleDateFormat("HH:MM:SS");
@@ -519,8 +577,8 @@ public class ProyectProcedures {
             System.err.println("No digito la fecha correctamente");
 
         }
-        System.out.println("Digite lahora de salida en el siguiente formato "
-                + "(HH:MM:SS)");
+        System.out.println("Digite lahora de salida en el siguiente formato"
+                + " (HH:MM:SS)");
 
         try {
             String selectDepartureT = scannertwo.nextLine();
@@ -574,17 +632,18 @@ public class ProyectProcedures {
 
         for (int i = 0; i < allProduct.length; i++) {
 
-            System.out.println("_____________________________________________");
+            System.out.println("___________________________________________"
+                    + "______");
 
             System.out.println("Producto N(" + (i + 1) + ")");
             if (allProduct[i] != null) {
 
-                System.out.println("codigo de producto " + allProduct[i].
-                        getIdProduct());
-                System.out.println("nombre del producto " + allProduct[i].
-                        getProductName());
-                System.out.println("tipo de material " + allProduct[i].
-                        getProductMaterial());
+                System.out.println("codigo de producto " + allProduct[i]
+                        .getIdProduct());
+                System.out.println("nombre del producto " + allProduct[i]
+                        .getProductName());
+                System.out.println("tipo de material " + allProduct[i]
+                        .getProductMaterial());
 
             }
         }
@@ -640,18 +699,15 @@ public class ProyectProcedures {
 
     }
 
-    /*
-    Este metodo se encarga de mostrar los datos de los vehiculos registrados de
-    entrada y salida.
-     */
+    /* estemetodo tiene como funcion ver el registro de vehiculos*/
     public void seeRegisterV() {
         System.out.println("__________________________________________");
         System.out.println("vehiculos registrados");
         for (int i = 0; i < registerRequest.length; i++) {
             if (registerRequest[i] != null) {
                 System.out.println("Este vehiculo esta asignado a la "
-                        + "solicicitud"
-                        + " de " + registerRequest[i].getApplicant().getName());
+                        + "solicicitud de " + registerRequest[i]
+                                .getApplicant().getName());
                 System.out.println("Conductor " + registerRequest[i]
                         .getVehicle().getDriver());
                 System.out.println("fecha de entrada " + registerRequest[i]
@@ -662,6 +718,12 @@ public class ProyectProcedures {
                         + registerRequest[i].getVehicle().getEntryTime());
                 System.out.println("hora de salida del vehiculo"
                         + registerRequest[i].getVehicle().getDepartureTime());
+
+                System.out.println("toneladas a llevar" + registerRequest[i]
+                        .getVehicle().getTonsLoaded());
+
+                System.out.println("Matricula " + registerRequest[i]
+                        .getVehicle().getTuition());
 
             }
         }
@@ -675,6 +737,7 @@ public class ProyectProcedures {
     public double spaceQuadrant[] = {4, 40, 400, 4000, 40000, 80, 800, 8000,
         800000, 0,};
 
+    /* este metodo tiene como funcion explotar los cuadrantes*/
     public Quadrant explodeQuadrant(double tons) {
         double x = 0;
 
@@ -712,7 +775,8 @@ public class ProyectProcedures {
 
         for (int i = 0; i < spaceQuadrant.length; i++) {
 
-            System.out.println(spaceQuadrant[i]);
+            System.out.println("Cuadrante numero " + (i + 1) + ") "
+                    + spaceQuadrant[i] + " toneladas");
 
         }
     }
@@ -726,8 +790,8 @@ public class ProyectProcedures {
         for (int i = 0; i < registerRequest.length; i++) {
             if (registerRequest[i] != null) {
                 if (registerRequest[i].getState().equals("En Tramite")) {
-                    System.out.println("______________________________________"
-                            + "_______________________________");
+                    System.out.println("________________________________"
+                            + "_____________________________________");
                     System.out.println("el numero de solicitud es "
                             + registerRequest[i].getNumRequest());
                     System.out.println("el nombre del cliente es "
@@ -746,8 +810,8 @@ public class ProyectProcedures {
 
                     System.out.println("la fecha en que fue tramitada la"
                             + " solicitud es " + registerRequest[i].getDate());
-                    System.out.println("____________________________________"
-                            + "_________________________________");
+                    System.out.println("________________________________"
+                            + "_____________________________________");
 
                 }
             }
@@ -767,20 +831,20 @@ public class ProyectProcedures {
 
         verifier = false;
         do {
-            System.out.println("Digite el numero de solicitud que desea "
-                    + "cancelar");
+            System.out.println("Digite el numero de solicitud que desea"
+                    + " cancelar");
             String selectId = scannertwo.nextLine();
 
             for (int i = 0; i < registerRequest.length; i++) {
                 if (registerRequest[i] != (null)) {
                     if (selectId.equalsIgnoreCase(registerRequest[i]
                             .getNumRequest())) {
-                        spaceQuadrant[9] = spaceQuadrant[9] + registerRequest[i]
-                                .getVehicle().getTonsLoaded();
+                        spaceQuadrant[9] = spaceQuadrant[9]
+                                + registerRequest[i].getVehicle().getTonsLoaded();
 
                         registerRequest[i].setState("Deshabilitado");
-                        System.out.println("la solicitud ha sido dehabilitada "
-                                + "exitosamente");
+                        System.out.println("la solicitud ha sido deshabilitada"
+                                + " exitosamente");
 
                         verifier = true;
                     }
@@ -803,8 +867,8 @@ public class ProyectProcedures {
                 if (registerRequest[i] != null) {
                     explodeQuadrant(registerRequest[i]
                             .getVehicle().getTonsLoaded());
-                    System.out.println("_____________________________"
-                            + "______________________");
+                    System.out.println("__________________________________"
+                            + "_________________");
                     Date dates = new Date();
                     System.out.println("Los cuadrantes correspondientes "
                             + "explotaron el " + dates);
@@ -860,11 +924,10 @@ public class ProyectProcedures {
             if (exit.equalsIgnoreCase("si")) {
 
                 exitAll = false;
-                System.out.println("ha salido correctamente del programa");
-                System.out.println("Gracias "
-                        + registerUser[countName].getName()
-                        + " por usar Sibajas Quarry");
 
+                System.out.println("Gracias " + registerUser[countName]
+                        .getName() + " por usar Sibajas Quarry");
+                System.out.println("ha salido correctamente del programa");
                 exitProgram = false;
 
             } else {
@@ -872,8 +935,8 @@ public class ProyectProcedures {
                 if ((exit.equalsIgnoreCase("no"))) {
                     System.out.println("Bienvenido nuevamente "
                             + registerUser[countName].getName());
-                    System.out.println("Selecione a continuación la operacion"
-                            + " que desea realizar:  ");
+                    System.out.println("Selecione a continuación la"
+                            + " operacion que desea realizar:  ");
                     exitProgram = false;
 
                 } else {
@@ -887,11 +950,11 @@ public class ProyectProcedures {
 
     }
 
-    /*
-    Este metodo se encarga de visualizar los datos de las facturas.
-     */
+    /* este caso tiene como funcion ver los clientes persona en tramite para
+    facturar*/
     public Request seeRBillingP() {
 
+        // Request registerRequest[] = new Request[10];
         for (int i = 0; i < registerRequest.length; i++) {
             if (registerRequest[i] != null) {
                 if (registerRequest[i].getState().equals("En Tramite")) {
@@ -908,9 +971,7 @@ public class ProyectProcedures {
         return new Request();
     }
 
-    /*
-    Este metodo se encarga de introducir el numero de factura.
-     */
+    /* este metodo tiene como funcion alsignar los datos de factura y retornarlos*/
     public Billing billingCustomer() {
         System.out.println("Digite el numero de factura");
         String numBilling = scannertwo.nextLine();
@@ -918,18 +979,15 @@ public class ProyectProcedures {
         return new Billing(billingDate, numBilling, request);
     }
 
-    /*
-    Este metodo se encarga de cancelar las solicitudes anteriormente 
-    realizadas.
-     */
+    /* este metodo tiene como funcion mostrar las facturas actuales*/
     public Billing callBillingP() {
         seeRBillingP();
         customerBilling();
         String idRequest = customerBilling();
         for (int i = 0; i < registerBilling.length; i++) {
             if (registerBilling != null) {
-                if (registerBilling[i]
-                        .getRequest().getNumRequest().equals(idRequest)) {
+                if (registerBilling[i].getRequest().getNumRequest()
+                        .equals(idRequest)) {
                     System.out.println(registerBilling[i].toString());
                 }
             }
@@ -938,10 +996,7 @@ public class ProyectProcedures {
 
     }
 
-    /*
-    Este metodo se encarga de pedir el numero de solicitud para facturar y 
-    delegar si ya fue tramitado.
-     */
+    /* este metodo tiene como duncion selkeccionar la factura que desea tramitar*/
     public String customerBilling() {
 
         System.out.println("solicitud a facturar");
@@ -968,9 +1023,8 @@ public class ProyectProcedures {
 
     }
 
-    /*
-    Este metodo se encarga de mostrar si se incorporo esta la factura.
-     */
+    /* este metodo tiene como funcion almacenar el los datos de la factura
+    en un arreglo*/
     public Billing billingPerson(String idRequest) {
         for (int i = 0; i < registerBilling.length; i++) {
             if (registerBilling[i] == null) {
