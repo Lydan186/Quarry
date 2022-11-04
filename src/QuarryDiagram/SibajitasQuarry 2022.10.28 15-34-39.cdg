@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="SibajitasQuarry">
+  <ClassDiagramComponents>
+    <Class name="Applicant" package="SibajitasQuarry" visibility="public" xPosition="907.0" yPosition="429.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="applicant" returnType="void" visibility="public"/>
+        <Method name="getIdCustomer" returnType="String" visibility="public"/>
+        <Method name="setIdCustomer" returnType="void" visibility="public">
+          <Argument type="String" name="idCustomer"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getAddres" returnType="String" visibility="public"/>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="getCIF" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setAddres" returnType="void" visibility="public">
+          <Argument type="String" name="addres"/>
+        </Method>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="setCIF" returnType="void" visibility="public">
+          <Argument type="String" name="CIF"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Billing" package="SibajitasQuarry" visibility="public" xPosition="1304.0" yPosition="682.0">
+      <Fields>
+        <Field name="billingDate" type="Date" visibility="private"/>
+        <Field name="billNumber" type="String" visibility="private"/>
+        <Field name="request" type="Request" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Date" name="billingDate"/>
+          <Argument type="String" name="billNumber"/>
+          <Argument type="Request" name="request"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBillingDate" returnType="Date" visibility="public"/>
+        <Method name="setBillingDate" returnType="void" visibility="public">
+          <Argument type="Date" name="billingDate"/>
+        </Method>
+        <Method name="getBillNumber" returnType="String" visibility="public"/>
+        <Method name="setBillNumber" returnType="void" visibility="public">
+          <Argument type="String" name="billNumber"/>
+        </Method>
+        <Method name="getRequest" returnType="Request" visibility="public"/>
+        <Method name="setRequest" returnType="void" visibility="public">
+          <Argument type="Request" name="request"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="invoice" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClientBusiness" package="SibajitasQuarry" visibility="public" xPosition="1249.0" yPosition="3.0">
+      <Fields>
+        <Field name="CIF" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="CIF"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCIF" returnType="String" visibility="public"/>
+        <Method name="setCIF" returnType="void" visibility="public">
+          <Argument type="String" name="CIF"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getAddres" returnType="String" visibility="public"/>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="setAddres" returnType="void" visibility="public">
+          <Argument type="String" name="Addres"/>
+        </Method>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="Phone"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClientPerson" package="SibajitasQuarry" visibility="public" xPosition="491.0" yPosition="120.0">
+      <Fields>
+        <Field name="idCostumer" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="idCostumer"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="idCostumer"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="addres"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="DNI"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdCostumer" returnType="String" visibility="public"/>
+        <Method name="setIdCostumer" returnType="void" visibility="public">
+          <Argument type="String" name="idCostumer"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getIdCustomer" returnType="String" visibility="public"/>
+        <Method name="setIdCustomer" returnType="void" visibility="public">
+          <Argument type="String" name="idCustomer"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Driver" package="SibajitasQuarry" visibility="public" xPosition="-148.0" yPosition="500.0">
+      <Fields>
+        <Field name="license" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="license"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="license"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="addres"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="DNI"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLicense" returnType="String" visibility="public"/>
+        <Method name="setLicense" returnType="void" visibility="public">
+          <Argument type="String" name="license"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="SibajitasQuarry" visibility="public" xPosition="-36.0" yPosition="-91.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="addres" type="String" visibility="private"/>
+        <Field name="phone" type="String" visibility="private"/>
+        <Field name="DNI" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="addres"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="DNI"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getAddres" returnType="String" visibility="public"/>
+        <Method name="setAddres" returnType="void" visibility="public">
+          <Argument type="String" name="addres"/>
+        </Method>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="getDNI" returnType="String" visibility="public"/>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="String" name="DNI"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Product" package="SibajitasQuarry" visibility="public" xPosition="418.0" yPosition="1138.0">
+      <Fields>
+        <Field name="idProduct" type="String" visibility="private"/>
+        <Field name="productName" type="String" visibility="private"/>
+        <Field name="productMaterial" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="idProduct"/>
+          <Argument type="String" name="productName"/>
+          <Argument type="String" name="productMaterial"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdProduct" returnType="String" visibility="public"/>
+        <Method name="setIdProduct" returnType="void" visibility="public">
+          <Argument type="String" name="idProduct"/>
+        </Method>
+        <Method name="getProductName" returnType="String" visibility="public"/>
+        <Method name="setProductName" returnType="void" visibility="public">
+          <Argument type="String" name="productName"/>
+        </Method>
+        <Method name="getProductMaterial" returnType="String" visibility="public"/>
+        <Method name="setProductMaterial" returnType="void" visibility="public">
+          <Argument type="String" name="productMaterial"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Quadrant" package="SibajitasQuarry" visibility="public" xPosition="1314.0" yPosition="1105.0">
+      <Fields>
+        <Field name="request" type="Request" visibility="private"/>
+        <Field name="hourExplosionProgramming" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Request" name="request"/>
+          <Argument type="Date" name="hourExplosionProgramming"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRequest" returnType="Request" visibility="public"/>
+        <Method name="setRequest" returnType="void" visibility="public">
+          <Argument type="Request" name="request"/>
+        </Method>
+        <Method name="getHourExplosionProgramming" returnType="Date" visibility="public"/>
+        <Method name="setHourExplosionProgramming" returnType="void" visibility="public">
+          <Argument type="Date" name="hourExplosionProgramming"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="explosionProgrammingMethod" returnType="void" visibility="public"/>
+        <Method name="getProduct" returnType="Product" visibility="public"/>
+        <Method name="setProduct" returnType="void" visibility="public">
+          <Argument type="Product" name="product"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Request" package="SibajitasQuarry" visibility="public" xPosition="813.0" yPosition="778.0">
+      <Fields>
+        <Field name="product" type="Product" visibility="private"/>
+        <Field name="date" type="Date" visibility="private"/>
+        <Field name="state" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Product" name="product"/>
+          <Argument type="Date" name="date"/>
+          <Argument type="int" name="state"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getProduct" returnType="Product" visibility="public"/>
+        <Method name="setProduct" returnType="void" visibility="public">
+          <Argument type="Product" name="product"/>
+        </Method>
+        <Method name="getDate" returnType="Date" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="Date" name="date"/>
+        </Method>
+        <Method name="getState" returnType="int" visibility="public"/>
+        <Method name="setState" returnType="void" visibility="public">
+          <Argument type="int" name="state"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="requested" returnType="void" visibility="public"/>
+        <Method name="applyFor" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="User" package="SibajitasQuarry" visibility="public" xPosition="199.0" yPosition="654.0">
+      <Fields>
+        <Field name="userName" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="userName"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="userName"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="addres"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="DNI"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUserName" returnType="String" visibility="public"/>
+        <Method name="setUserName" returnType="void" visibility="public">
+          <Argument type="String" name="userName"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="login" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vehicle" package="SibajitasQuarry" visibility="public" xPosition="-309.0" yPosition="813.0">
+      <Fields>
+        <Field name="entryTime" type="Date" visibility="private"/>
+        <Field name="entryDate" type="Date" visibility="private"/>
+        <Field name="tuition" type="String" visibility="private"/>
+        <Field name="departureDate" type="Date" visibility="private"/>
+        <Field name="departureTime" type="Date" visibility="private"/>
+        <Field name="tonsLoaded" type="double" visibility="private"/>
+        <Field name="driver" type="Driver" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Date" name="entryTime"/>
+          <Argument type="Date" name="entryDate"/>
+          <Argument type="String" name="tuition"/>
+          <Argument type="Date" name="departureDate"/>
+          <Argument type="Date" name="departureTime"/>
+          <Argument type="double" name="tonsLoaded"/>
+          <Argument type="Driver" name="driver"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getEntryTime" returnType="Date" visibility="public"/>
+        <Method name="setEntryTime" returnType="void" visibility="public">
+          <Argument type="Date" name="entryTime"/>
+        </Method>
+        <Method name="getEntryDate" returnType="Date" visibility="public"/>
+        <Method name="setEntryDate" returnType="void" visibility="public">
+          <Argument type="Date" name="entryDate"/>
+        </Method>
+        <Method name="getTuition" returnType="String" visibility="public"/>
+        <Method name="setTuition" returnType="void" visibility="public">
+          <Argument type="String" name="tuition"/>
+        </Method>
+        <Method name="getDepartureDate" returnType="Date" visibility="public"/>
+        <Method name="setDepartureDate" returnType="void" visibility="public">
+          <Argument type="Date" name="departureDate"/>
+        </Method>
+        <Method name="getDepartureTime" returnType="Date" visibility="public"/>
+        <Method name="setDepartureTime" returnType="void" visibility="public">
+          <Argument type="Date" name="departureTime"/>
+        </Method>
+        <Method name="getTonsLoaded" returnType="double" visibility="public"/>
+        <Method name="setTonsLoaded" returnType="void" visibility="public">
+          <Argument type="double" name="tonsLoaded"/>
+        </Method>
+        <Method name="getDriver" returnType="Driver" visibility="public"/>
+        <Method name="setDriver" returnType="void" visibility="public">
+          <Argument type="Driver" name="driver"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="CostumerBusiness" package="SibajitasQuarry" visibility="public" xPosition="1233.0" yPosition="393.0">
+      <Methods>
+        <Method name="getName" returnType="String" visibility="package"/>
+        <Method name="getAddres" returnType="String" visibility="package"/>
+        <Method name="getPhone" returnType="String" visibility="package"/>
+        <Method name="getCIF" returnType="String" visibility="package"/>
+        <Method name="setName" returnType="void" visibility="package">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setAddres" returnType="void" visibility="package">
+          <Argument type="String" name="addres"/>
+        </Method>
+        <Method name="setPhone" returnType="void" visibility="package">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="setCIF" returnType="void" visibility="package">
+          <Argument type="String" name="CIF"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="CostumerPerson" package="SibajitasQuarry" visibility="public" xPosition="820.0" yPosition="283.0">
+      <Methods>
+        <Method name="getIdCustomer" returnType="String" visibility="package"/>
+        <Method name="setIdCustomer" returnType="void" visibility="package">
+          <Argument type="String" name="idCustomer"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PersonInterface" package="SibajitasQuarry" visibility="public" xPosition="552.0" yPosition="393.0">
+      <Methods>
+        <Method name="getAddres" returnType="String" visibility="package"/>
+        <Method name="getDNI" returnType="String" visibility="package"/>
+        <Method name="getName" returnType="String" visibility="package"/>
+        <Method name="getPhone" returnType="String" visibility="package"/>
+        <Method name="setAddres" returnType="void" visibility="package">
+          <Argument type="String" name="addres"/>
+        </Method>
+        <Method name="setDNI" returnType="void" visibility="package">
+          <Argument type="String" name="DNI"/>
+        </Method>
+        <Method name="setName" returnType="void" visibility="package">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setPhone" returnType="void" visibility="package">
+          <Argument type="String" name="phone"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="RequestProduct" package="SibajitasQuarry" visibility="public" xPosition="925.0" yPosition="1205.0">
+      <Methods>
+        <Method name="getProduct" returnType="Product" visibility="package"/>
+        <Method name="setProduct" returnType="void" visibility="package">
+          <Argument type="Product" name="product"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="SharedInformation" package="SibajitasQuarry" visibility="public" xPosition="778.0" yPosition="38.0">
+      <Methods>
+        <Method name="getName" returnType="String" visibility="package"/>
+        <Method name="getAddres" returnType="String" visibility="package"/>
+        <Method name="getPhone" returnType="String" visibility="package"/>
+        <Method name="setName" returnType="void" visibility="package">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setAddres" returnType="void" visibility="package">
+          <Argument type="String" name="addres"/>
+        </Method>
+        <Method name="setPhone" returnType="void" visibility="package">
+          <Argument type="String" name="phone"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Enum name="PaymentMethods" package="SibajitasQuarry" visibility="public" xPosition="1540.0" yPosition="450.0">
+      <Literals>
+        <Literal name="CASH"/>
+        <Literal name="CREDITCARD"/>
+        <Literal name="SIMPEMOVIL"/>
+        <Literal name="LITERAL"/>
+        <Literal name="BANKDRAFT"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.Person" target="SibajitasQuarry.PersonInterface"/>
+    <HasRelation name="has" source="SibajitasQuarry.Request" target="SibajitasQuarry.Applicant" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="request" source="SibajitasQuarry.Quadrant" target="SibajitasQuarry.Request" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.Person" target="SibajitasQuarry.SharedInformation"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.ClientBusiness" target="SibajitasQuarry.SharedInformation"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.ClientPerson" target="SibajitasQuarry.CostumerPerson"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.Applicant" target="SibajitasQuarry.CostumerPerson"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.Request" target="SibajitasQuarry.RequestProduct"/>
+    <IsRelation name="is" source="SibajitasQuarry.User" target="SibajitasQuarry.Person"/>
+    <HasRelation name="product" source="SibajitasQuarry.Request" target="SibajitasQuarry.Product" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="has" source="SibajitasQuarry.Billing" target="SibajitasQuarry.PaymentMethods" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.Applicant" target="SibajitasQuarry.CostumerBusiness"/>
+    <IsRelation name="is" source="SibajitasQuarry.Driver" target="SibajitasQuarry.Person"/>
+    <HasRelation name="driver" source="SibajitasQuarry.Vehicle" target="SibajitasQuarry.Driver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="request" source="SibajitasQuarry.Billing" target="SibajitasQuarry.Request" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="SibajitasQuarry.Request" target="SibajitasQuarry.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.Quadrant" target="SibajitasQuarry.RequestProduct"/>
+    <UseRelation source="SibajitasQuarry.RequestProduct" target="SibajitasQuarry.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="SibajitasQuarry.Vehicle" target="SibajitasQuarry.Driver" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SibajitasQuarry.ClientBusiness" target="SibajitasQuarry.CostumerBusiness"/>
+    <UseRelation source="SibajitasQuarry.Quadrant" target="SibajitasQuarry.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="SibajitasQuarry.Billing" target="SibajitasQuarry.Request" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="SibajitasQuarry.ClientPerson" target="SibajitasQuarry.Person"/>
+    <UseRelation source="SibajitasQuarry.Quadrant" target="SibajitasQuarry.Request" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

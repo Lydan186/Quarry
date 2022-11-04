@@ -1,4 +1,4 @@
-package SibajitasQuarry;
+package clases;
 
 public class Product {
 
@@ -9,6 +9,10 @@ public class Product {
     private String productMaterial;
 
     public Product() {
+    }
+
+    public Product(String idProduct) {
+        this.idProduct = idProduct;
     }
 
     public Product(String idProduct, String productName, String productMaterial) {
@@ -63,6 +67,14 @@ public class Product {
     public String toString() {
         return "Product{" + "idProduct=" + idProduct + ", productName=" + productName + ", productMaterial=" + productMaterial + '}';
     }
-    
-    
+ 
+    public String toName() {
+        return "Product{" + "product="+ productName + '}';
+    }
+    public String toProductId() {
+        return "Product{" + "id product="+ idProduct + '}';
+    }
+     public String toMaterial() {
+        return "Product{" + "product Material="+ productMaterial + '}';
+    }
 }

@@ -1,5 +1,4 @@
-package SibajitasQuarry;
-
+package clases;
 
 import java.util.Date;
 
@@ -22,12 +21,20 @@ public class Vehicle {
     public Vehicle() {
     }
 
-    public Vehicle(Date entryTime, Date entryDate, String tuition, Date departureDate, Date departureTime, double tonsLoaded, Driver driver) {
-        this.entryTime = entryTime;
+    public Vehicle(Date entryDate, String tuition, Date departureDate, double tonsLoaded, Driver driver,Date entryTime,Date departureTime) {
         this.entryDate = entryDate;
         this.tuition = tuition;
         this.departureDate = departureDate;
-        this.departureTime = departureTime;
+        this.tonsLoaded = tonsLoaded;
+        this.driver = driver;
+        this.entryTime=entryTime;
+                this.departureTime=departureTime;
+    }
+
+   
+
+    public Vehicle(String tuition, double tonsLoaded, Driver driver) {
+        this.tuition = tuition;
         this.tonsLoaded = tonsLoaded;
         this.driver = driver;
     }
@@ -134,6 +141,9 @@ public class Vehicle {
     public String toString() {
         return "Vehicle{" + "entryTime=" + entryTime + ", entryDate=" + entryDate + ", tuition=" + tuition + ", departureDate=" + departureDate + ", departureTime=" + departureTime + ", tonsLoaded=" + tonsLoaded + ", driver=" + driver + '}';
     }
-    
-    
+
+    public String driverInforma() {
+        return "Driver{" + "Driver informartion=" + driver + '}';
+    }
+
 }

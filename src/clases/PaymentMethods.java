@@ -1,4 +1,4 @@
-package SibajitasQuarry;
+package clases;
 
 public enum PaymentMethods {
 

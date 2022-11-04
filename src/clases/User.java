@@ -1,4 +1,4 @@
-package SibajitasQuarry;
+package clases;
 
 public class User extends Person {
 
@@ -6,18 +6,23 @@ public class User extends Person {
 
     private String password;
 
+    public String toStrin() {
+        return "User{" + "userName=" + userName + ", password=" + password + '}';
+    }
+
     public User() {
     }
 
-    public User(String userName, String password) {
+    public User(String userName, String addres) {
         this.userName = userName;
-        this.password = password;
+        this.password = addres;
     }
 
     public User(String userName, String password, String name, String addres, String phone, String DNI) {
         super(name, addres, phone, DNI);
         this.userName = userName;
         this.password = password;
+
     }
 
     /**
@@ -50,10 +55,8 @@ public class User extends Person {
 
     @Override
     public String toString() {
-        return super.toString()+ "User{" + "userName=" + userName + ", password=" + password + '}';
+        return super.toString() + "User{" + "userName=" + userName + ", password=" + password + '}';
     }
-    
-    
 
     public void login() {
     }

@@ -1,6 +1,6 @@
-package SibajitasQuarry;
+package clases;
 
-public class Person implements SharedInformation {
+public class Person implements SharedInformation, NewInterface, personInterface {
 
     private String name;
 
@@ -23,6 +23,7 @@ public class Person implements SharedInformation {
     /**
      * @return the name
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -30,6 +31,7 @@ public class Person implements SharedInformation {
     /**
      * @param name the name to set
      */
+    @Override
     public void setName(String name) {
         this.name = name;
     }
@@ -37,6 +39,7 @@ public class Person implements SharedInformation {
     /**
      * @return the addres
      */
+    @Override
     public String getAddres() {
         return addres;
     }
@@ -44,6 +47,7 @@ public class Person implements SharedInformation {
     /**
      * @param addres the addres to set
      */
+    @Override
     public void setAddres(String addres) {
         this.addres = addres;
     }
@@ -51,6 +55,7 @@ public class Person implements SharedInformation {
     /**
      * @return the phone
      */
+    @Override
     public String getPhone() {
         return phone;
     }
@@ -58,6 +63,7 @@ public class Person implements SharedInformation {
     /**
      * @param phone the phone to set
      */
+    @Override
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -65,21 +71,29 @@ public class Person implements SharedInformation {
     /**
      * @return the DNI
      */
+    @Override
     public String getDNI() {
         return DNI;
+        
     }
 
     /**
      * @param DNI the DNI to set
      */
+    @Override
     public void setDNI(String DNI) {
         this.DNI = DNI;
     }
 
     @Override
     public String toString() {
-        return "Person{" + "name=" + name + ", addres=" + addres + ", phone="
-                + phone + ", DNI=" + DNI + '}';
+        return "" + "Nombre=" + name + ", Direccion=" + addres + ", Telefono=" + 
+                phone + ", DNI=" + DNI + ',';
     }
-
+    {
+    
+    
+    
+    }
+    
 }

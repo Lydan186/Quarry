@@ -1,7 +1,6 @@
-package SibajitasQuarry;
+package clases;
 
 
-import SibajitasQuarry.Request;
 import java.util.Date;
 
 public class Billing {

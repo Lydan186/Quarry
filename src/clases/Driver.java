@@ -1,27 +1,34 @@
-package SibajitasQuarry;
-
-
-import SibajitasQuarry.Person;
+package clases;
 
 public class Driver extends Person {
 
     private String license;
+    private String Name;
 
     public Driver() {
     }
 
-    public Driver(String license) {
-        this.license = license;
+    public Driver(String nametwo) {
+        this.Name = nametwo;
     }
 
     public Driver(String license, String name, String addres, String phone, String DNI) {
         super(name, addres, phone, DNI);
         this.license = license;
+
     }
 
     /**
      * @return the license
      */
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String nametwo) {
+        this.Name = nametwo;
+    }
+
     public String getLicense() {
         return license;
     }
@@ -35,8 +42,11 @@ public class Driver extends Person {
 
     @Override
     public String toString() {
-        return "Driver{" + "license=" + license + '}';
+        return super.toString() + "Driver{" + "license=" + license + '}';
     }
-    
-    
+
+    public String toName() {
+        return "Driver{" + "Name=" + Name + '}';
+    }
+
 }
